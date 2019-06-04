@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <h1 style="color: #1c7430">
+      Awesome Calculator
+    </h1>
+  </div>
+  <div>
+    <input type="number" [value]="first" (change)="inputFirst($event.target.value)" >
+    <select [value]="operator" (change)="selectChange($event.target.value)">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="x">x</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" [value]="second" (change)="inputSecond($event.target.value)">
+  </div>
+  <div>
+    <button (click)="calculate()">Calculate</button>
+  </div>
+  <h3 style="color: #1c7430">Result: {{output}}</h3>
+
+  <h1>Color Works</h1>
+  <input type="color" [value]="background" (change)="changeColor($event.target.value)">
+  <p>Output:</p>
+  <div class="color" [style.background]="background"></div>
+</div>
